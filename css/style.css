@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: blanchedalmond;
+}
+
+#container {
+    width: 1400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    margin-top: 20px;
+    background-color: white;
+    text-align: center;
+}

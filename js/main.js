@@ -1,5 +1,9 @@
 'use strict';
 
+const outputElement = document.getElementById('output');
+
+const imgPath = 'img/';
+
 const ourTeam = [
     {
         fullName: 'Wayne Barnett',
@@ -34,9 +38,39 @@ const ourTeam = [
 ];
 
 for (let i = 0; i < ourTeam.length; i++) {
-    const person = ourTeam[i];
-    console.log(`Full Name: ${person.fullName}`);
-    console.log(`Job: ${person.job}`);
-    console.log(`Profile Image: ${person.profileImage}`);
-    console.log("---");
+    const member = ourTeam[i];
+    console.log(`Name: ${member.fullName}, Job: ${member.job}, Photo: ${member.profileImage}`);
 }
+
+function createCard() {
+    const containerDiv = document.getElementById('container');
+    for (let i = 0; i < ourTeam.length; i++) {
+        const member = ourTeam[i];
+
+        let card = document.createElement('div');
+        card.classList.add('card');
+
+        const photo = document.createElement('img');
+        photo.src = `${imgPath}${member.profileImage}`;
+        photo.alt = `Full Name:${member.fullName}`;
+        card.appendChild(photo);
+
+        const nameHeading = document.createElement('h3');
+        nameHeading.innerHTML = member.fullName;
+        card.appendChild(nameHeading);
+
+        const jobParagraph = document.createElement('p');
+        jobParagraph.innerHTML = member.job;
+        card.appendChild(jobParagraph);
+
+        containerDiv.append(card);
+    }
+};
+
+createCard();
+
+
+
+
+
+
