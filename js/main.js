@@ -32,3 +32,11 @@ const ourTeam = [
         profileImage: 'barbara-ramos-graphic-designer.jpg',
     }
 ];
+
+for (let i = 0; i < ourTeam.length; i++) {
+    const person = ourTeam[i];
+    console.log(`Full Name: ${person.fullName}`);
+    console.log(`Job: ${person.job}`);
+    console.log(`Profile Image: ${person.profileImage}`);
+    console.log("---");
+}
