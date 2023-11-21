@@ -7,7 +7,22 @@
 body {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: blanchedalmond;
+    flex-direction: column;
+}
+
+.title {
+    width: 700px;
+    text-align: center;
+}
+
+.title h1 {
+    padding: 20px;
+}
+
+.title p {
+    padding-bottom: 20px;
 }
 
 #container {
@@ -18,7 +33,14 @@ body {
 }
 
 .card {
-    margin-top: 20px;
+    margin: 20px;
     background-color: white;
     text-align: center;
+
+    width: calc(100% / 3 - 120px);
+}
+
+
+.photo {
+    width: 100%;
 }

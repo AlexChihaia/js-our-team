@@ -53,6 +53,7 @@ function createCard() {
         const photo = document.createElement('img');
         photo.src = `${imgPath}${member.profileImage}`;
         photo.alt = `Full Name:${member.fullName}`;
+        photo.classList.add('photo');
         card.appendChild(photo);
 
         const nameHeading = document.createElement('h3');
